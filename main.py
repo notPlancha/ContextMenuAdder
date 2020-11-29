@@ -3,7 +3,7 @@ import winreg as wreg
 def create_reg(name, path, message):
     key = wreg.CreateKey(wreg.HKEY_CLASSES_ROOT, "*\\shell\\" + name)
     wreg.SetValue(key, 'command', wreg.REG_SZ, ("\"{}\", \"%1\"".format(path)))
-    wreg.SetValueEx(key, '(Default)', 0, wreg.REG_SZ, message)
+    wreg.SetValueEx(key, '', 0, wreg.REG_SZ, message)
     wreg.SetValueEx(key, 'Icon', 0, wreg.REG_SZ, "\"{}\"".format(path))
     key.Close()
     
