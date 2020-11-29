@@ -17,7 +17,3 @@ if __name__ == '__main__':
     print("Created; You should see the changes when you restart your pc.")
     input("\nEnter to exit")
 
-
-
-#keyCreated = wreg.CreateKey(wreg.HKEY_CLASSES_ROOT, "\\shell")
-
